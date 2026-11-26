@@ -10,12 +10,12 @@ bot = fluxer.Bot(command_prefix="!", intents=fluxer.Intents.default())
 
 @bot.event
 async def on_ready():
-    async for cog in os.listdir('./cogs'):
+    for cog in os.listdir('./cogs'):
         await bot.load_extension(f'cogs.{cog[:-3]}')
     print(f"Logged in as {bot.user.username}")
 
 @bot.command()
-@fluxer.has_permissions(manage_guild=True)
+@fluxer.has_permission(manage_guild=True)
 async def reload(ctx: fluxer.Message, cog: str = "main_cog"):
     try:
         if cog not in bot.extensions:
