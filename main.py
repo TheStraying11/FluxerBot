@@ -6,7 +6,7 @@ import os
 import fluxer
 from fluxer.ext.commands import has_permissions
 
-bot = fluxer.Bot(command_prefix="tc!", intents=fluxer.Intents.default())
+bot = fluxer.Bot(command_prefix="!", intents=fluxer.Intents.default())
 
 
 @bot.event
