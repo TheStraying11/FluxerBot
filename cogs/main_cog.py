@@ -6,8 +6,8 @@ class Main(Cog):
         super().__init__(bot)
 
 async def setup(bot: fluxer.Bot):
-    await bot.add_cog(MainCog(bot))
+    await bot.add_cog(Main(bot))
 
 
 async def teardown(bot: fluxer.Bot):
-    await bot.remove_cog("MainCog")
+    await bot.remove_cog("Main")
